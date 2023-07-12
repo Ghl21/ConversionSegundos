@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SegundosAFecha</string>
+    <string name="calcular">Calcular</string>
+    <string name="dias">Día(s)</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="resultado">Resultado</string>
+    <string name="conversion_segundos">Conversión de Segundos</string>
+    <string name="horas">Hora(s):</string>
+    <string name="minutos">Minuto(s):</string>
+    <string name="segundos">Segundo(s):</string>
+    <string name="segundos_convertidos">Segundos Convertidos:</string>
+</resources>
