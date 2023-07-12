@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     public int segundosConvertir,entradaSegundos, dias, horas, minutos, segundos;
+    public int segundosAdias = 86400;
+    public int segundosAhoras = 3600;
+    public int segundosAminutos = 60;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -35,18 +38,18 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "La cantidad "+ entradaSegundos +" segundos es incorrecta", Toast.LENGTH_LONG).show();
                     }
 
-                    if(entradaSegundos >= 86400)
+                    if(entradaSegundos >= segundosAdias)
                     {
-                        dias = entradaSegundos/86400;
-                        entradaSegundos = entradaSegundos - (dias * 86400);
+                        dias = entradaSegundos/segundosAdias;
+                        entradaSegundos = entradaSegundos - (dias * segundosAdias);
                     }
 
-                    horas = entradaSegundos/3600;
-                    int faltante = entradaSegundos - (horas * 3600);
+                    horas = entradaSegundos/segundosAhoras;
+                    int faltante = entradaSegundos - (horas * segundosAhoras);
                     if(faltante > 0)
                     {
-                        minutos = (faltante/60);
-                        segundos = faltante - (minutos * 60);
+                        minutos = (faltante/segundosAminutos);
+                        segundos = faltante - (minutos * segundosAminutos);
                     }
 
                     binding.lnlSegundosConvertidos.setVisibility(View.VISIBLE);
